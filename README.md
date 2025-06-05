@@ -23,8 +23,8 @@ Robots.txt is a middleware plugin for [Traefik](https://traefik.io/) which add r
 experimental:
   plugins:
     robots-txt:
-      moduleName: github.com/solution-libre/traefik-plugin-robots-txt
-      version: v0.2.1
+      moduleName: github.com/aon4o/traefik-plugin-robots-txt
+      version: {{latest tagged version}}
 ```
 
 ## Usage
@@ -65,11 +65,4 @@ http:
 
 ## Development
 
-[Solution Libre](https://www.solution-libre.fr)'s repositories are open projects,
-and community contributions are essential for keeping them great.
-
-[Fork this repo on GitHub](https://github.com/solution-libre/traefik-plugin-robots-txt/fork)
-
-## Contributors
-
-The list of contributors can be found at: <https://github.com/solution-libre/traefik-plugin-robots-txt/graphs/contributors>
+This is a fork of the original Plugin by [Solution Libre](https://github.com/solution-libre). If you want to contribute, go to his [repo](https://github.com/solution-libre/traefik-plugin-robots-txt).
