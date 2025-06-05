@@ -2,7 +2,7 @@ displayName: Robots.txt Plugin
 type: middleware
 iconPath: .assets/icon.png
 
-import: github.com/solution-libre/traefik-plugin-robots-txt
+import: github.com/aon4o/traefik-plugin-robots-txt
 
 summary: 'Traefik plugin to create, overwrite or complete the robots.txt file'
 
