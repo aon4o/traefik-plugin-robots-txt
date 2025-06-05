@@ -105,9 +105,6 @@ func (p *RobotsTxtPlugin) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 		body = wrappedWriter.buffer.String() + "\n"
 	}
 
-	body += "# The following content was added on the fly by the Robots.txt Traefik plugin: " +
-		"https://plugins.traefik.io/plugins/681b2f3fba3486128fc34fae/robots-txt-plugin\n"
-
 	if p.aiRobotsTxt {
 		aiRobotsTxt, err := p.fetchAiRobotsTxt()
 		if err != nil {
@@ -115,7 +112,8 @@ func (p *RobotsTxtPlugin) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 		}
 		body += aiRobotsTxt
 	}
-	body += p.customRules
+
+	body += strings.ReplaceAll(p.customRules, `\n`, "\n")
 
 	_, err := rw.Write([]byte(body))
 	if err != nil {
